@@ -1,0 +1,18 @@
+<svg width="300" height="400" viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="20" y="20" width="260" height="360" rx="12" fill="#212121" stroke="#ff9700" stroke-width="2"/>
+
+    <rect x="20" y="20" width="260" height="50" rx="12 12 0 0" fill="#1a1a1a"/>
+    <text x="150" y="50" text-anchor="middle" font-family="Manrope, sans-serif" font-size="16" font-weight="700" fill="#ff9700">EMPLOYEE ID</text>
+
+    <rect x="110" y="85" width="80" height="40" rx="4" fill="#333333"/>
+    <text x="150" y="110" text-anchor="middle" font-family="Manrope, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">YOUR LOGO</text>
+
+    <circle cx="150" cy="190" r="50" fill="#DDDDDD"/>
+    <text x="150" y="195" text-anchor="middle" font-family="Manrope, sans-serif" font-size="12" fill="#888888">Photo</text>
+
+    <text x="150" y="270" text-anchor="middle" font-family="Manrope, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Employee Name</text>
+    <text x="150" y="295" text-anchor="middle" font-family="Manrope, sans-serif" font-size="14" fill="#ff9700">Graphic Designer</text>
+    <text x="150" y="320" text-anchor="middle" font-family="Manrope, sans-serif" font-size="12" fill="#AAAAAA">ID: TGM-001</text>
+
+    <rect x="70" y="345" width="160" height="3" fill="#ff9700"/>
+</svg>
