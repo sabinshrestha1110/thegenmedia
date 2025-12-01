@@ -1,158 +1,153 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>The Gen Media — Portfolio</title>
-<meta name="description" content="The Gen Media — Institute & Studio. Portfolio, courses and studio services." />
-<link rel="icon" href="/favicon.jpg" />
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Gen Media — Creating Future Creatives</title>
+  <meta name="description" content="The Gen Media — Institute & Studio. Studio-powered portfolio and courses: branding, social, motion and more." />
+  <link rel="icon" href="/favicon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <!-- Swiper (carousel) -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main">Skip to content</a>
 
-<header class="header" role="banner">
-  <div class="wrap header-grid">
-    <a class="brand" href="/">
-      <img src="/Logo.svg" alt="The Gen Media logo" class="brand-logo" />
-      <div class="brand-title">
-        <div class="name">The Gen Media</div>
-        <div class="sub">Institute & Studio</div>
+  <header class="header" role="banner">
+    <div class="wrap header-grid">
+      <a class="brand" href="/">
+        <img src="/Logo.svg" alt="The Gen Media logo" class="brand-logo" />
+        <div class="brand-title">
+          <div class="name">The Gen Media</div>
+          <div class="sub">Institute & Studio</div>
+        </div>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary" href="https://forms.gle/6L6UycsvaEgu83Fn7" target="_blank" rel="noopener noreferrer">Enroll</a>
+        <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
       </div>
-    </a>
-
-    <nav class="nav" role="navigation" aria-label="Main navigation">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="header-actions">
-      <a class="btn btn-primary" href="https://forms.gle/6L6UycsvaEgu83Fn7" target="_blank" rel="noopener noreferrer">Enroll</a>
-      <button id="menuToggle" class="menu-toggle" aria-expanded="false">☰</button>
     </div>
-  </div>
 
-  <div id="mobileNav" class="mobile-nav" hidden>
-    <a href="#home">Home</a>
-    <a href="#work">Work</a>
-    <a href="#services">Services</a>
-    <a href="#courses">Courses</a>
-    <a href="#contact">Contact</a>
-    <a class="btn btn-primary" href="https://forms.gle/6L6UycsvaEgu83Fn7" target="_blank">Enroll</a>
-  </div>
-</header>
+    <div id="mobileNav" class="mobile-nav" hidden aria-hidden="true">
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#courses">Courses</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="https://forms.gle/6L6UycsvaEgu83Fn7" target="_blank">Enroll</a>
+    </div>
+  </header>
 
-<main id="main">
+  <main id="main">
 
-  <!-- HERO -->
-  <section id="home" class="segment hero">
-    <div class="wrap hero-grid">
-      <div class="hero-left">
-        <p class="eyebrow">Institute & Studio</p>
-        <h1>THE GEN MEDIA — <span class="accent">CREATING FUTURE CREATIVES</span></h1>
-        <p class="lead">Studio-powered courses and professional creative work — identity, branding, social, and video.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary large" href="https://forms.gle/6L6UycsvaEgu83Fn7" target="_blank">Enroll Now</a>
-          <a class="btn btn-outline large" href="#services">Hire Studio</a>
+    <!-- HERO -->
+    <section id="home" class="segment hero">
+      <div class="wrap hero-grid">
+        <div class="hero-left">
+          <p class="eyebrow">Institute & Studio</p>
+          <h1>THE GEN MEDIA<span class="visually-hidden"> — </span><span class="accent">CREATING FUTURE CREATIVES</span></h1>
+          <p class="lead">Studio-powered courses and professional creative work — identity, branding, social, and video. Students graduate with portfolio-ready projects created in our studio.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary large" href="https://forms.gle/6L6UycsvaEgu83Fn7" target="_blank">Enroll Now</a>
+            <a class="btn btn-outline large" href="#services">Hire Studio</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <!-- Hero artwork: floating composition-->
+          <svg viewBox="0 0 560 420" class="hero-illustration" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <defs>
+              <linearGradient id="gHero" x1="0" x2="1"><stop offset="0" stop-color="#ffb570"/><stop offset="1" stop-color="#ff9700"/></linearGradient>
+              <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#000" flood-opacity="0.12"/>
+              </filter>
+            </defs>
+
+            <rect x="6" y="12" rx="20" width="520" height="360" fill="#eee7e9" />
+            <g transform="translate(40,28)" class="parallax" data-parallax="-0.22" filter="url(#shadow)">
+              <rect x="0" y="0" rx="12" width="360" height="260" fill="#ffffff"/>
+              <image href="/Logo.svg" x="24" y="18" width="130" height="130" preserveAspectRatio="xMidYMid meet" />
+              <rect x="172" y="20" rx="6" width="160" height="14" fill="#212121" opacity="0.06"/>
+              <rect x="172" y="44" rx="6" width="110" height="12" fill="#212121" opacity="0.04"/>
+              <rect x="24" y="170" rx="6" width="312" height="18" fill="#212121" opacity="0.04"/>
+            </g>
+
+            <circle cx="480" cy="50" r="34" fill="url(#gHero)" opacity="0.12" class="parallax" data-parallax="-0.08"/>
+            <path d="M60 320 C150 220, 320 360, 480 260" stroke="url(#gHero)" stroke-width="8" fill="none" opacity="0.08" class="parallax" data-parallax="-0.12"/>
+          </svg>
         </div>
       </div>
+    </section>
 
-      <div class="hero-right">
-        <!-- Hero artwork: floating geometric composition; embeds your Logo.svg on mock device -->
-        <svg viewBox="0 0 560 420" class="hero-illustration" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-          <defs>
-            <linearGradient id="heroG" x1="0" x2="1">
-              <stop offset="0" stop-color="#ffb570" />
-              <stop offset="1" stop-color="#ff9700" />
-            </linearGradient>
-            <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-              <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000" flood-opacity="0.15"/>
-            </filter>
-          </defs>
+    <!-- WORK / PORTFOLIO -->
+    <section id="work" class="segment segment-work">
+      <div class="wrap">
+        <div class="segment-head">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Portfolio</h2>
+          <p class="muted">A curated selection of identity, packaging and social work — mockups are generated from your logo for the prototype.</p>
+        </div>
 
-          <rect x="6" y="12" rx="20" width="520" height="360" fill="#eee7e9" opacity="1" />
-          <g transform="translate(40,28)" filter="url(#soft)" class="parallax" data-parallax="-0.22">
-            <!-- device frame -->
-            <rect x="0" y="0" rx="12" width="360" height="260" fill="#fff" />
-            <!-- place logo.svg as an image inside the mock screen -->
-            <image href="/Logo.svg" x="16" y="18" width="140" height="140" preserveAspectRatio="xMidYMid meet" />
-            <!-- mock content blocks -->
-            <rect x="170" y="20" rx="6" width="170" height="18" fill="#212121" opacity="0.08"/>
-            <rect x="170" y="44" rx="6" width="110" height="14" fill="#212121" opacity="0.04"/>
-            <rect x="16" y="170" rx="6" width="320" height="18" fill="#212121" opacity="0.04"/>
-          </g>
+        <div class="filters" role="tablist" aria-label="Filter projects">
+          <button class="filter active" data-filter="all" role="tab">All</button>
+          <button class="filter" data-filter="identity" role="tab">Identity</button>
+          <button class="filter" data-filter="packaging" role="tab">Packaging</button>
+          <button class="filter" data-filter="social" role="tab">Social</button>
+          <button class="filter" data-filter="mockup" role="tab">Mockups</button>
+        </div>
 
-          <circle cx="480" cy="50" r="34" fill="url(#heroG)" opacity="0.12" class="parallax" data-parallax="-0.08"/>
-          <path d="M50 320 C140 220, 300 360, 460 260" stroke="url(#heroG)" stroke-width="8" fill="none" opacity="0.08" class="parallax" data-parallax="-0.12"/>
-        </svg>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORK / PORTFOLIO -->
-  <section id="work" class="segment segment-work">
-    <div class="wrap">
-      <div class="segment-head">
-        <p class="eyebrow">Selected Work</p>
-        <h2>Portfolio</h2>
-        <p class="muted">A curated selection of identity, packaging and social work — sample mockups generated from your logo.</p>
-      </div>
-
-      <div class="filters">
-        <button class="filter active" data-filter="all">All</button>
-        <button class="filter" data-filter="identity">Identity</button>
-        <button class="filter" data-filter="packaging">Packaging</button>
-        <button class="filter" data-filter="social">Social</button>
-        <button class="filter" data-filter="mockup">Mockups</button>
-      </div>
-
-      <div class="grid work-grid" id="workGrid">
-        <!-- 6 sample items. Each item uses an inline SVG mockup and references /Logo.svg -->
-        <!-- Project 1 -->
-        <article class="work-item card reveal" data-type="identity" data-title="Brand System — AXIS">
-          <div class="mockup">
-            <svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet" class="mock-svg">
-              <rect x="0" y="0" width="400" height="280" rx="12" fill="#eee7e9"/>
+        <div id="workGrid" class="grid work-grid" role="list">
+          <!-- six items: data-index ties to large mockup sets in scripts.js -->
+          <article class="work-item card reveal" role="listitem" data-type="identity" data-index="0" data-title="AXIS — Identity">
+            <div class="mockup">{/*svg injected in markup below*/}</div>
+            <h3 class="work-title">AXIS — Identity</h3>
+            <p class="work-meta muted">Identity • Business Card • Guidelines</p>
+            <button class="btn btn-ghost open-case">View case</button>
+            <!-- inline svg mockup -->
+            <svg viewBox="0 0 400 280" class="mock-svg" aria-hidden="true">
+              <rect width="400" height="280" rx="12" fill="#eee7e9"/>
               <g transform="translate(20,22)">
-                <rect x="0" y="0" width="210" height="120" rx="8" fill="#fff" stroke="#212121" opacity="0.06"/>
+                <rect x="0" y="0" width="210" height="120" rx="8" fill="#fff" />
                 <image href="/Logo.svg" x="16" y="12" width="96" height="96" />
                 <rect x="232" y="18" rx="6" width="140" height="14" fill="#212121" opacity="0.06"/>
                 <rect x="232" y="40" rx="6" width="96" height="10" fill="#212121" opacity="0.04"/>
               </g>
             </svg>
-          </div>
-          <h3 class="work-title">AXIS — Identity</h3>
-          <p class="work-meta muted">Identity • Business Card • Guidelines</p>
-          <button class="btn btn-ghost open-case">View case</button>
-        </article>
+          </article>
 
-        <!-- Project 2 -->
-        <article class="work-item card reveal" data-type="packaging" data-title="SERRA — Packaging">
-          <div class="mockup">
-            <svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet" class="mock-svg">
+          <article class="work-item card reveal" role="listitem" data-type="packaging" data-index="1" data-title="SERRA — Packaging">
+            <div class="mockup"></div>
+            <h3 class="work-title">SERRA — Packaging</h3>
+            <p class="work-meta muted">Packaging • Label • Mockups</p>
+            <button class="btn btn-ghost open-case">View case</button>
+            <svg viewBox="0 0 400 280" class="mock-svg" aria-hidden="true">
               <rect width="400" height="280" rx="12" fill="#eee7e9"/>
-              <g transform="translate(24,26)" class="parallax" data-parallax="-0.06">
-                <rect x="0" y="0" width="140" height="160" rx="8" fill="#fff" stroke="#212121" opacity="0.04" />
+              <g transform="translate(24,26)">
+                <rect x="0" y="0" width="140" height="160" rx="8" fill="#fff" />
                 <image href="/Logo.svg" x="20" y="20" width="100" height="100" />
               </g>
               <rect x="180" y="34" width="200" height="30" rx="6" fill="#212121" opacity="0.05"/>
             </svg>
-          </div>
-          <h3 class="work-title">SERRA — Packaging</h3>
-          <p class="work-meta muted">Packaging • Label • Mockups</p>
-          <button class="btn btn-ghost open-case">View case</button>
-        </article>
+          </article>
 
-        <!-- Project 3 -->
-        <article class="work-item card reveal" data-type="social" data-title="Pulse — Social">
-          <div class="mockup">
-            <svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet" class="mock-svg">
+          <article class="work-item card reveal" role="listitem" data-type="social" data-index="2" data-title="Pulse — Social">
+            <div class="mockup"></div>
+            <h3 class="work-title">Pulse — Social</h3>
+            <p class="work-meta muted">Social • Reels • Campaign</p>
+            <button class="btn btn-ghost open-case">View case</button>
+            <svg viewBox="0 0 400 280" class="mock-svg" aria-hidden="true">
               <rect width="400" height="280" rx="12" fill="#eee7e9"/>
               <g transform="translate(16,16)">
                 <rect x="0" y="0" width="368" height="200" rx="8" fill="#fff" />
@@ -161,16 +156,14 @@
                 <rect x="108" y="56" width="160" height="12" rx="6" fill="#212121" opacity="0.03"/>
               </g>
             </svg>
-          </div>
-          <h3 class="work-title">Pulse — Social</h3>
-          <p class="work-meta muted">Social • Reels • Campaign</p>
-          <button class="btn btn-ghost open-case">View case</button>
-        </article>
+          </article>
 
-        <!-- Project 4 -->
-        <article class="work-item card reveal" data-type="identity" data-title="Nimbus — Identity">
-          <div class="mockup">
-            <svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet" class="mock-svg">
+          <article class="work-item card reveal" role="listitem" data-type="identity" data-index="3" data-title="Nimbus — Identity">
+            <div class="mockup"></div>
+            <h3 class="work-title">Nimbus — Identity</h3>
+            <p class="work-meta muted">Logo • Stationery</p>
+            <button class="btn btn-ghost open-case">View case</button>
+            <svg viewBox="0 0 400 280" class="mock-svg" aria-hidden="true">
               <rect width="400" height="280" rx="12" fill="#eee7e9"/>
               <g transform="translate(18,18)">
                 <rect x="0" y="0" width="360" height="100" rx="8" fill="#fff" />
@@ -178,36 +171,30 @@
                 <rect x="156" y="120" width="180" height="12" rx="6" fill="#212121" opacity="0.05"/>
               </g>
             </svg>
-          </div>
-          <h3 class="work-title">Nimbus — Identity</h3>
-          <p class="work-meta muted">Logo • Stationery</p>
-          <button class="btn btn-ghost open-case">View case</button>
-        </article>
+          </article>
 
-        <!-- Project 5 -->
-        <article class="work-item card reveal" data-type="mockup" data-title="Office kit — Mockups">
-          <div class="mockup">
-            <svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet" class="mock-svg">
+          <article class="work-item card reveal" role="listitem" data-type="mockup" data-index="4" data-title="Office Kit — Mockups">
+            <div class="mockup"></div>
+            <h3 class="work-title">Office Kit — Mockups</h3>
+            <p class="work-meta muted">Card • Notebook • Mug</p>
+            <button class="btn btn-ghost open-case">View case</button>
+            <svg viewBox="0 0 400 280" class="mock-svg" aria-hidden="true">
               <rect width="400" height="280" rx="12" fill="#eee7e9"/>
               <g transform="translate(20,20)">
-                <!-- business card -->
                 <rect x="0" y="0" width="120" height="72" rx="8" fill="#fff" stroke="#212121" opacity="0.04"/>
                 <image href="/Logo.svg" x="12" y="8" width="48" height="48"/>
-                <!-- notebook -->
-                <rect x="148" y="0" width="176" height="120" rx="10" fill="#fff" opacity="0.98"/>
+                <rect x="148" y="0" width="176" height="120" rx="10" fill="#fff" />
                 <image href="/Logo.svg" x="164" y="18" width="64" height="64"/>
               </g>
             </svg>
-          </div>
-          <h3 class="work-title">Office Kit — Mockups</h3>
-          <p class="work-meta muted">Card • Notebook • Mug</p>
-          <button class="btn btn-ghost open-case">View case</button>
-        </article>
+          </article>
 
-        <!-- Project 6 -->
-        <article class="work-item card reveal" data-type="social" data-title="Echo — Campaign">
-          <div class="mockup">
-            <svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid meet" class="mock-svg">
+          <article class="work-item card reveal" role="listitem" data-type="social" data-index="5" data-title="Echo — Campaign">
+            <div class="mockup"></div>
+            <h3 class="work-title">Echo — Campaign</h3>
+            <p class="work-meta muted">Campaign • Reels • Social</p>
+            <button class="btn btn-ghost open-case">View case</button>
+            <svg viewBox="0 0 400 280" class="mock-svg" aria-hidden="true">
               <rect width="400" height="280" rx="12" fill="#eee7e9"/>
               <g transform="translate(18,18)">
                 <rect x="0" y="0" width="360" height="220" rx="8" fill="#fff" />
@@ -215,120 +202,126 @@
                 <rect x="120" y="28" width="216" height="16" rx="6" fill="#212121" opacity="0.04"/>
               </g>
             </svg>
-          </div>
-          <h3 class="work-title">Echo — Campaign</h3>
-          <p class="work-meta muted">Campaign • Reels • Social</p>
-          <button class="btn btn-ghost open-case">View case</button>
-        </article>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="segment segment-services">
+      <div class="wrap">
+        <div class="segment-head">
+          <p class="eyebrow">Studio</p>
+          <h2>Services</h2>
+          <p class="muted">Brand identity, social strategy, video production and packaging — full service creative.</p>
+        </div>
+
+        <div class="service-grid">
+          <div class="service card reveal"><h4>Brand Identity</h4><p>Logo systems & guides, mockups and rollouts.</p></div>
+          <div class="service card reveal"><h4>Social Campaigns</h4><p>Content planning, reels and short-form videos.</p></div>
+          <div class="service card reveal"><h4>Video & Production</h4><p>Shooting, editing and ad creatives.</p></div>
+          <div class="service card reveal"><h4>Packaging & Print</h4><p>Labels, posters and collateral.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSES -->
+    <section id="courses" class="segment segment-courses">
+      <div class="wrap">
+        <div class="segment-head">
+          <p class="eyebrow">Institute</p>
+          <h2>Courses</h2>
+          <p class="muted">3-month core and 1-month intensives — practical, studio-tested curriculum.</p>
+        </div>
+
+        <div class="card-grid">
+          <div class="card reveal"><h3>3-month Core</h3><p>Design fundamentals + motion + editing. Includes freelancing & client handling.</p></div>
+          <div class="card reveal"><h3>1-month — Graphic Design</h3><p>Tools, layout and branding.</p></div>
+          <div class="card reveal"><h3>1-month — Motion & Video</h3><p>Motion fundamentals & short-form editing.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="segment segment-contact">
+      <div class="wrap">
+        <div class="segment-head">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's talk</h2>
+          <p class="muted">For student inquiries, client projects, and careers.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card reveal"><h4>Email</h4><p><a href="mailto:info@thegenmedia.com.np">info@thegenmedia.com.np</a></p></div>
+          <div class="card reveal"><h4>Phone</h4><p><a href="tel:+9779761356000">+977 9761356000</a></p></div>
+          <div class="card reveal"><h4>Location</h4><p>Pathari, Morang, Nepal</p></div>
+        </div>
+
+        <div class="center" style="margin-top:18px">
+          <a class="btn btn-outline" href="https://forms.gle/6L6UycsvaEgu83Fn7" target="_blank">Student Inquiry</a>
+          <a class="btn btn-primary" href="https://forms.gle/WZLYFY72FQ23aKHg8" target="_blank">Client Inquiry</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="brand-col">
+        <img src="/Logo.svg" alt="The Gen Media" class="logo small" />
+        <p class="muted">The Gen Media — Institute & Studio</p>
+      </div>
+      <div class="links-col">
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="social-col">
+        <h4>Follow</h4>
+        <div class="socials">
+          <a href="https://www.instagram.com/the.gen.media/" target="_blank" rel="noopener noreferrer">IG</a>
+          <a href="https://www.tiktok.com/@the_gen_media" target="_blank" rel="noopener noreferrer">TT</a>
+          <a href="https://www.facebook.com/the.gen.media" target="_blank" rel="noopener noreferrer">FB</a>
+          <a href="https://x.com/the_gen_media" target="_blank" rel="noopener noreferrer">X</a>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="segment segment-services">
-    <div class="wrap">
-      <div class="segment-head">
-        <p class="eyebrow">Studio</p>
-        <h2>Services</h2>
-        <p class="muted">Brand identity, social strategy, video production and packaging — full service creative.</p>
-      </div>
-
-      <div class="service-grid">
-        <div class="service card reveal"><h4>Brand Identity</h4><p>Logo, systems, guidelines & mockups.</p></div>
-        <div class="service card reveal"><h4>Social Campaigns</h4><p>Strategic content, reels and growth.</p></div>
-        <div class="service card reveal"><h4>Video & Production</h4><p>Short-form, promo and ads.</p></div>
-        <div class="service card reveal"><h4>Packaging & Print</h4><p>Labels, posters, banners and materials.</p></div>
-      </div>
+    <div class="wrap copyright">
+      <p>© <span id="year"></span> The Gen Media — All rights reserved.</p>
     </div>
-  </section>
+  </footer>
 
-  <!-- COURSES -->
-  <section id="courses" class="segment segment-courses">
-    <div class="wrap">
-      <div class="segment-head">
-        <p class="eyebrow">Institute</p>
-        <h2>Courses</h2>
-        <p class="muted">3-month core and 1-month intensives — practical, studio-tested curriculum.</p>
-      </div>
+  <!-- Modal / Swiper container (hidden by default) -->
+  <div id="caseModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project case view">
+    <div class="modal-dialog" role="document">
+      <button class="modal-close" aria-label="Close case">✕</button>
+      <div class="modal-body">
+        <!-- Swiper -->
+        <div class="swiper-container swiper" id="caseSwiper" aria-label="Project images">
+          <div class="swiper-wrapper" id="modalSlides"></div>
+          <div class="swiper-pagination"></div>
+          <button class="swiper-button-prev" aria-label="Previous slide"></button>
+          <button class="swiper-button-next" aria-label="Next slide"></button>
+        </div>
 
-      <div class="card-grid">
-        <div class="card reveal"><h3>3-month Core</h3><p>Design fundamentals + motion + editing. Includes freelancing & client handling.</p></div>
-        <div class="card reveal"><h3>1-month — Graphic Design</h3><p>Tools, layout and branding.</p></div>
-        <div class="card reveal"><h3>1-month — Motion & Video</h3><p>Motion fundamentals & short-form editing.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="segment segment-contact">
-    <div class="wrap">
-      <div class="segment-head">
-        <p class="eyebrow">Contact</p>
-        <h2>Let's talk</h2>
-        <p class="muted">For student inquiries, client projects, and careers.</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="card reveal"><h4>Email</h4><p><a href="mailto:info@thegenmedia.com.np">info@thegenmedia.com.np</a></p></div>
-        <div class="card reveal"><h4>Phone</h4><p><a href="tel:+9779761356000">+977 9761356000</a></p></div>
-        <div class="card reveal"><h4>Location</h4><p>Pathari, Morang, Nepal</p></div>
-      </div>
-
-      <div class="center" style="margin-top:18px">
-        <a class="btn btn-outline" href="https://forms.gle/6L6UycsvaEgu83Fn7" target="_blank">Student Inquiry</a>
-        <a class="btn btn-primary" href="https://forms.gle/WZLYFY72FQ23aKHg8" target="_blank">Client Inquiry</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="wrap footer-grid">
-    <div class="brand-col">
-      <img src="/Logo.svg" alt="The Gen Media" class="logo small" />
-      <p class="muted">The Gen Media — Institute & Studio</p>
-    </div>
-    <div class="links-col">
-      <h4>Quick links</h4>
-      <ul>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="social-col">
-      <h4>Follow</h4>
-      <div class="socials">
-        <a href="https://www.instagram.com/the.gen.media/" target="_blank" rel="noopener noreferrer">IG</a>
-        <a href="https://www.tiktok.com/@the_gen_media" target="_blank" rel="noopener noreferrer">TT</a>
-        <a href="https://www.facebook.com/the.gen.media" target="_blank" rel="noopener noreferrer">FB</a>
-        <a href="https://x.com/the_gen_media" target="_blank" rel="noopener noreferrer">X</a>
+        <div class="modal-info">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDesc"></p>
+          <p class="muted">Prototype mockups generated from your logo; replace with real assets when ready.</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="wrap copyright">
-    <p>© <span id="year"></span> The Gen Media — All rights reserved.</p>
-  </div>
-</footer>
-
-<!-- Modal for case view -->
-<div id="caseModal" class="modal" aria-hidden="true">
-  <div class="modal-dialog" role="dialog" aria-modal="true">
-    <button class="modal-close" aria-label="Close">✕</button>
-    <div class="modal-body">
-      <div class="modal-media" id="modalMedia"></div>
-      <div class="modal-info" id="modalInfo">
-        <h3 id="modalTitle"></h3>
-        <p id="modalDesc"></p>
-        <p class="muted">Sample deliverables and mockups generated automatically.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="/scripts.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script defer src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script defer src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script defer src="/scripts.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
