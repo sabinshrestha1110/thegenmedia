@@ -1,0 +1,79 @@
+/* --- NEW STYLES FOR REDESIGN --- */
+
+/* Text Logo Styling */
+.text-logo {
+    font-size: 1.4em;
+    font-weight: 800;
+    color: var(--color-primary); /* Use orange for the text logo */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Path Selector Section */
+#paths {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.path-selector-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 900px; /* Keep this section tighter for focus */
+    margin-top: 30px;
+}
+
+.path-card {
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.path-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Specific Card Styles */
+.path-card.primary-bg { /* Orange Card for Institute */
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+}
+.path-card.primary-bg h3 {
+    color: var(--color-dark);
+}
+
+.path-card.secondary-bg-card { /* Dark Grey Card for Studio */
+    background-color: var(--color-secondary-bg);
+    color: var(--color-light);
+    border: 1px solid var(--color-primary); /* Orange border for definition */
+}
+.path-card.secondary-bg-card h3 {
+    color: var(--color-primary);
+}
+
+
+/* Path Card Button Override (needed because the card styles conflict with global button styles) */
+.path-card .btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+/* Button style specifically for the Orange Card (Black button text on Orange card) */
+.btn-secondary-dark {
+    background-color: var(--color-dark);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+.btn-secondary-dark:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+/* Mobile adjustments for Path Selector */
+@media (max-width: 600px) {
+    .path-selector-grid {
+        grid-template-columns: 1fr;
+    }
+}
