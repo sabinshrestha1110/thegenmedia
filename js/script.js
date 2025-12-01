@@ -7,10 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const scrolled = window.scrollY;
 
             // Apply a subtle vertical movement (Parallax) to the hero background
-            // The background moves 5 times slower than the foreground (scrolled / 5)
+            // The background moves 5 times slower than the foreground (scrolled * 0.2)
+            // This is the "moving element" effect requested by graphic designers.
             hero.style.backgroundPositionY = (scrolled * 0.2) + 'px';
         });
     }
 
-    // --- You can add more interactive JS features here later ---
+    // --- Add more interactive JS features (like fade-in on scroll) here later ---
 });
