@@ -1,10 +1,11 @@
-/* styles.css — Minimal dark-first one-page for The Gen Media */
+/* styles.css — segmented one-page layout for The Gen Media */
 
 /* Design tokens */
 :root{
   --brand: #ff9700;
   --bg: #0f0f10;
   --paper: #161617;
+  --paper-2: #101012; /* slightly different dark for alternating segments */
   --text: #eee7e9;
   --muted: #a9a9a9;
   --radius: 12px;
@@ -14,10 +15,11 @@
   --ease: 240ms;
 }
 
-/* Light mode overrides */
+/* Light mode overrides (if user toggles) */
 :root.light{
   --bg: #eee7e9;
   --paper: #ffffff;
+  --paper-2: #f7f7f7;
   --text: #212121;
   --muted: #666666;
 }
@@ -74,8 +76,12 @@ body{
 .sticky-enroll{background:var(--brand);color:#111}
 @media(min-width:900px){.sticky{display:none}}
 
+/* SEGMENT base */
+.segment{padding:64px 0}
+.segment-inner{max-width:var(--max);margin:0 auto;padding:0 18px}
+
 /* Hero */
-.hero{padding:56px 0}
+.segment-hero{background:linear-gradient(180deg,var(--paper), rgba(255,255,255,0.01));}
 .hero-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
 .eyebrow{font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em}
 h1{font-size:clamp(28px,6vw,48px);margin:6px 0 12px;line-height:1.02}
@@ -83,36 +89,41 @@ h1{font-size:clamp(28px,6vw,48px);margin:6px 0 12px;line-height:1.02}
 .lead{color:var(--muted);max-width:60ch;margin-bottom:16px}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap}
 
-/* Card grid */
+/* Section head */
+.segment-head{max-width:900px;margin:0 auto 24px;text-align:center}
+.segment-title{font-size:1.6rem;margin:6px 0}
+.segment-lead{color:var(--muted);margin-bottom:18px}
+
+/* Alternating segment backgrounds */
+.segment-courses{background:var(--paper-2)}
+.segment-services{background:var(--paper)}
+.segment-careers{background:var(--paper-2)}
+.segment-contact{background:var(--paper)}
+
+/* Card grid & cards */
 .card-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
 @media(min-width:640px){.card-grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:900px){.card-grid{grid-template-columns:repeat(3,1fr)}}
 
-/* Cards */
-.card{background:var(--paper);padding:18px;border-radius:14px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.03)}
-.card h3{margin-top:0}
-.icon-wrap{width:48px;height:48px;border-radius:10px;background:linear-gradient(180deg,rgba(255,151,0,0.09),transparent);display:flex;align-items:center;justify-content:center;color:var(--brand)}
-
-/* Section helpers */
-.section-title{font-size:1.05rem;margin-bottom:8px}
-.section-intro{color:var(--muted);margin-bottom:18px}
-
-/* Split layout */
-.split{display:block}
-@media(min-width:900px){.split{display:flex;gap:28px;align-items:flex-start}}
+.card{background:transparent;padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.card h3{margin-top:0;font-size:1.05rem}
+.list{padding-left:18px;color:var(--muted)}
 
 /* Service grid */
 .service-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px}
 @media(min-width:640px){.service-grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:900px){.service-grid{grid-template-columns:repeat(4,1fr)}}
-.service{padding:14px;border-radius:10px;background:transparent}
-
-/* Portfolio */
-.portfolio-card .picon{width:46px;height:46px;border-radius:10px;background:rgba(255,151,0,0.06);display:flex;align-items:center;justify-content:center;color:var(--brand)}
+.service.card{background:transparent;padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
 
 /* Contact grid */
-.contact-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:18px}
 @media(min-width:640px){.contact-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* Divider (diagonal svg) */
+.divider{line-height:0;overflow:hidden}
+.divider svg{display:block;width:100%;height:44px;fill:var(--paper-2);color:var(--paper-2)}
+.divider-down svg{transform:rotate(0deg)}
+.divider-up svg{transform:rotate(180deg)}
 
 /* Footer */
 .footer{border-top:1px solid rgba(255,255,255,0.03);padding:36px 0;margin-top:36px}
@@ -124,21 +135,16 @@ h1{font-size:clamp(28px,6vw,48px);margin:6px 0 12px;line-height:1.02}
 .reveal{opacity:0;transform:translateY(8px);transition:opacity 420ms ease,transform 420ms ease}
 .reveal.is-visible{opacity:1;transform:none}
 
-/* Small screens */
+/* Responsive */
 @media(max-width:899px){
   .header-grid{grid-template-columns:1fr auto}
   .nav{display:none}
   .menu-toggle{display:block}
   .wrap{padding:18px}
-  .hero{padding:36px 0}
+  .segment{padding:36px 0}
   .cta-row{flex-direction:column}
   .btn{width:100%}
 }
 
 /* Accessibility focus */
-a:focus, button:focus {outline:3px solid rgba(255,151,0,0.18);outline-offset:3px;}
-
-/* Utility */
-.center{text-align:center}
-.muted{color:var(--muted)}
-.list{padding-left:18px}
+a:focus, button:focus {outline:3px solid rgba(255,151,0,0.12);outline-offset:3px}
