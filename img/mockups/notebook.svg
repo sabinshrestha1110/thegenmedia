@@ -1,0 +1,18 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="50" y="50" width="300" height="200" rx="10" fill="#212121" stroke="#333333" stroke-width="2"/>
+    <rect x="55" y="60" width="5" height="15" fill="#555555" rx="2"/>
+    <rect x="55" y="80" width="5" height="15" fill="#555555" rx="2"/>
+    <rect x="55" y="100" width="5" height="15" fill="#555555" rx="2"/>
+    <rect x="55" y="120" width="5" height="15" fill="#555555" rx="2"/>
+    <rect x="55" y="140" width="5" height="15" fill="#555555" rx="2"/>
+    <rect x="55" y="160" width="5" height="15" fill="#555555" rx="2"/>
+    <rect x="55" y="180" width="5" height="15" fill="#555555" rx="2"/>
+    <rect x="55" y="200" width="5" height="15" fill="#555555" rx="2"/>
+    <rect x="55" y="220" width="5" height="15" fill="#555555" rx="2"/>
+
+
+    <rect x="140" y="110" width="120" height="70" rx="8" fill="#1a1a1a"/>
+    <text x="200" y="150" text-anchor="middle" font-family="Manrope, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">YOUR LOGO</text>
+
+    <rect x="100" y="240" width="200" height="3" fill="#ff9700"/>
+</svg>
