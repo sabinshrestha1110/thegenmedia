@@ -1,80 +1,456 @@
-/* --- NEW STYLES FOR REDESIGN --- */
+/* ---------------------------------------------------- */
+/* 1. COLOR VARIABLES, FONT, & GLOBAL RESET */
+/* ---------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-/* Text Logo Styling */
+:root {
+    /* New High-Contrast, Minimal Palette */
+    --color-primary-accent: #ff9700;/* Orange (Used for accents/hovers ONLY) */
+    --color-dark: #212121;          /* Black Background */
+    --color-darker: #1a1a1a;        /* Slightly Darker for subtle contrast */
+    --color-light: #eee7e9;         /* Off-White Text/Contrast */
+    --color-secondary-bg: #333333;  /* Dark Grey for 'Light' Sections */
+    
+    /* Typography */
+    --font-manrope: 'Manrope', sans-serif;
+    --max-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-manrope);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    line-height: 1.6;
+}
+
+/* ---------------------------------------------------- */
+/* 2. TYPOGRAPHY AND HEADLINES (Minimalist Look) */
+/* ---------------------------------------------------- */
+h1, h2, h3 {
+    margin-bottom: 20px;
+    font-weight: 800; 
+    line-height: 1.2;
+    color: var(--color-light); /* H2/H3 are now Off-White */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 4.5em; /* Larger H1 for impact */
+}
+
+h2 {
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Accent Line BELOW H2 (Subtle, elegant divider) */
+h2::after { 
+    content: '';
+    display: block;
+    width: 60px; 
+    height: 3px;
+    background-color: var(--color-primary-accent); /* Orange accent only here */
+    margin: 15px auto 0; 
+    border-radius: 2px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.7); /* Slightly muted subtitle */
+    font-weight: 300;
+}
+
+a {
+    color: var(--color-light); /* Default links are light/white */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-primary-accent); /* Orange only on hover */
+}
+
+ul {
+    list-style: none;
+}
+
+/* ---------------------------------------------------- */
+/* 3. SECTION LAYOUTS & UTILITIES */
+/* ---------------------------------------------------- */
+section {
+    padding: 100px 5%; /* Increased vertical padding for elegance */
+    min-height: 50vh;
+}
+
+.section-content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.dark-section {
+    background-color: var(--color-dark);
+}
+
+.light-section {
+    background-color: var(--color-darker); /* Subtle contrast shift */
+}
+
+/* Text Logo Style */
 .text-logo {
-    font-size: 1.4em;
-    font-weight: 800;
-    color: var(--color-primary); /* Use orange for the text logo */
-    letter-spacing: 1px;
+    font-size: 1.6em;
+    font-weight: 900;
+    color: var(--color-light); 
+    letter-spacing: 2px;
+    transition: color 0.3s;
+}
+.text-logo:hover {
+    color: var(--color-primary-accent);
+}
+
+/* Minimalist Divider */
+.divider-line {
+    width: 50%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+    margin: 0 auto;
+}
+
+
+/* ---------------------------------------------------- */
+/* 4. HEADER & NAVIGATION (Minimal Text-Heavy) */
+/* ---------------------------------------------------- */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(33, 33, 33, 0.98); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#navbar nav a {
+    color: var(--color-light);
+    margin-left: 35px; /* More spacing for minimal feel */
+    font-weight: 500;
+    font-size: 0.95em;
     text-transform: uppercase;
 }
 
-/* Path Selector Section */
-#paths {
-    padding-top: 50px;
-    padding-bottom: 50px;
+#navbar nav a.cta-link {
+    color: var(--color-dark);
+    background-color: var(--color-primary-accent);
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-left: 50px; 
 }
 
-.path-selector-grid {
+#navbar nav a.cta-link:hover {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+/* ---------------------------------------------------- */
+/* 5. HERO & CTA BUTTONS */
+/* ---------------------------------------------------- */
+#hero {
+    text-align: center;
+    padding: 200px 5% 150px; /* Massive padding for focus */
+}
+
+.btn {
+    display: inline-flex; 
+    align-items: center;
+    padding: 15px 35px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    margin: 10px; 
+    border: 2px solid transparent;
+}
+.btn i {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.btn-primary {
+    background-color: var(--color-primary-accent);
+    color: var(--color-dark);
+    border-color: var(--color-primary-accent);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--color-primary-accent);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-light); 
+    border-color: var(--color-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary-accent);
+    color: var(--color-dark);
+    border-color: var(--color-primary-accent);
+}
+
+.large-btn {
+    padding: 18px 45px;
+    font-size: 1em;
+}
+
+
+/* ---------------------------------------------------- */
+/* 6. PORTFOLIO GRID (The Showcase) */
+/* ---------------------------------------------------- */
+#portfolio h2 {
+    color: var(--color-light);
+}
+
+.portfolio-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    max-width: 900px; /* Keep this section tighter for focus */
-    margin-top: 30px;
+    grid-template-columns: 1fr 2fr 1fr; /* Asymmetrical grid for dynamic feel */
+    gap: 20px;
+    max-width: var(--max-width);
+    margin-top: 40px;
 }
 
-.path-card {
-    padding: 40px;
-    border-radius: 12px;
+.portfolio-item {
+    background-color: var(--color-darker);
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
     text-align: center;
     transition: transform 0.3s ease;
 }
-.path-card h3 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05); /* White shadow for elegance */
 }
 
-/* Specific Card Styles */
-.path-card.primary-bg { /* Orange Card for Institute */
-    background-color: var(--color-primary);
-    color: var(--color-dark);
-}
-.path-card.primary-bg h3 {
-    color: var(--color-dark);
-}
-
-.path-card.secondary-bg-card { /* Dark Grey Card for Studio */
-    background-color: var(--color-secondary-bg);
-    color: var(--color-light);
-    border: 1px solid var(--color-primary); /* Orange border for definition */
-}
-.path-card.secondary-bg-card h3 {
-    color: var(--color-primary);
-}
-
-
-/* Path Card Button Override (needed because the card styles conflict with global button styles) */
-.path-card .btn {
-    margin-top: 20px;
+.mockup-img {
     width: 100%;
-    padding: 15px 0;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    background-color: var(--color-dark);
+    border-radius: 4px;
+}
+.mockup-placeholder {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-dark);
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 0.9em;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
-/* Button style specifically for the Orange Card (Black button text on Orange card) */
-.btn-secondary-dark {
-    background-color: var(--color-dark);
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
-}
-.btn-secondary-dark:hover {
-    background-color: var(--color-dark);
-    color: var(--color-light);
+.portfolio-item .caption {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: var(--color-primary-accent);
 }
 
-/* Mobile adjustments for Path Selector */
-@media (max-width: 600px) {
-    .path-selector-grid {
+/* ---------------------------------------------------- */
+/* 7. INSTITUTE & STUDIO CARD STYLES */
+/* ---------------------------------------------------- */
+
+/* Course Card Wrapper */
+.course-section-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; 
+    gap: 20px; /* Reduced gap for a tighter look */
+    max-width: var(--max-width);
+    margin: 0 auto 50px;
+    text-align: left;
+}
+
+.course-card, .course-card-group, .addon-box, .service-group, .feature-box {
+    padding: 30px;
+    border-radius: 8px;
+    background-color: var(--color-dark); /* Use darker background for light section contrast */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.course-card:hover, .course-card-group:hover, .addon-box:hover, .service-group:hover, .feature-box:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1); 
+    cursor: pointer;
+}
+
+/* Special Orange Card (The ONLY place orange background is used) */
+.course-card.primary-bg {
+    background-color: var(--color-primary-accent);
+    color: var(--color-dark);
+    border: 1px solid var(--color-primary-accent);
+}
+.course-card.primary-bg h3, .course-card.primary-bg .duration, .course-card.primary-bg .addon-highlight {
+    color: var(--color-dark);
+}
+.course-list li, .service-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-weight: 300;
+}
+
+/* Studio Service Grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: var(--max-width);
+}
+.service-group h3 {
+    font-size: 1.2em;
+    color: var(--color-primary-accent); /* Orange for service headers */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* ---------------------------------------------------- */
+/* 8. CAREERS & CREDIBILITY (Split Layout) */
+/* ---------------------------------------------------- */
+#careers-and-proof {
+    padding-bottom: 60px;
+}
+.proof-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: left;
+}
+
+.careers-block h2, .proof-block h2 {
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+.careers-block h2::after, .proof-block h2::after {
+    margin-left: 0;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+.stat-box {
+    background-color: var(--color-secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.stat-number {
+    display: block;
+    font-size: 2.5em;
+    font-weight: 900;
+    color: var(--color-primary-accent);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+.stat-label {
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+}
+
+/* ---------------------------------------------------- */
+/* 9. FOOTER */
+/* ---------------------------------------------------- */
+#contact {
+    padding: 60px 5% 30px;
+    border-top: 2px solid var(--color-primary-accent);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; 
+    gap: 40px;
+    max-width: var(--max-width);
+    margin: 0 auto 30px;
+}
+.footer-grid h3 {
+    color: var(--color-primary-accent);
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+.contact-block p i {
+    color: var(--color-primary-accent);
+}
+
+.social-icons a {
+    color: var(--color-light); 
+}
+.social-icons a:hover {
+    color: var(--color-primary-accent); 
+}
+.copyright {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* ---------------------------------------------------- */
+/* 10. MOBILE RESPONSIVENESS */
+/* ---------------------------------------------------- */
+@media (max-width: 900px) {
+    h1 { font-size: 2.8em; }
+    h2 { font-size: 2em; margin-bottom: 40px;}
+    section { padding: 60px 5%; }
+    
+    .portfolio-grid, .service-grid {
         grid-template-columns: 1fr;
     }
-}
+    .portfolio-item.wide-item {
+        order: -1; /* Move the wide item up on mobile */
+    }
 
+    .course-section-wrapper {
+        grid-template-columns: 1fr; 
+    }
+    .course-card.primary-bg { order: -1; }
+
+    .proof-container {
+        grid-template-columns: 1fr;
+    }
+    .careers-block h2, .proof-block h2 {
+        text-align: center;
+    }
+    .careers-block h2::after, .proof-block h2::after {
+        margin: 15px auto 0;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .contact-block, .social-block, .legal-block {
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
