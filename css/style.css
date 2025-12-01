@@ -5,11 +5,11 @@
 
 :root {
     /* New High-Contrast, Minimal Palette */
-    --color-primary-accent: #ff9700;/* Orange (Used for accents/hovers ONLY) */
-    --color-dark: #212121;          /* Black Background */
-    --color-darker: #1a1a1a;        /* Slightly Darker for subtle contrast */
-    --color-light: #eee7e9;         /* Off-White Text/Contrast */
-    --color-secondary-bg: #333333;  /* Dark Grey for 'Light' Sections */
+    --color-primary-accent: #ff9700;          /* Orange (Used for accents/hovers ONLY) */
+    --color-dark: #212121;                    /* Black Background */
+    --color-darker: #1a1a1a;                   /* Slightly Darker for subtle contrast */
+    --color-light: #eee7e9;                   /* Off-White Text/Contrast */
+    --color-secondary-bg: #333333;            /* Dark Grey for 'Light' Sections */
     
     /* Typography */
     --font-manrope: 'Manrope', sans-serif;
@@ -229,51 +229,49 @@ section {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* Asymmetrical grid for dynamic feel */
-    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 25px; /* Increased gap for dynamic feel */
     max-width: var(--max-width);
     margin-top: 40px;
 }
+.portfolio-grid .wide-item {
+    grid-column: span 2; /* Span two columns for a visual break */
+}
+.portfolio-grid .wide-item:nth-child(5) {
+    grid-column: 1 / span 3; /* Make the poster span full width */
+}
+
 
 .portfolio-item {
     background-color: var(--color-darker);
-    padding: 20px;
-    border-radius: 8px;
+    padding: 25px;
+    border-radius: 12px; /* Smoother corners */
     overflow: hidden;
     position: relative;
     text-align: center;
     transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 .portfolio-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05); /* White shadow for elegance */
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.08); 
+    cursor: pointer;
 }
 
 .mockup-img {
     width: 100%;
     height: auto;
-    max-height: 300px;
+    max-height: 400px;
     object-fit: contain;
-    background-color: var(--color-dark);
+    background-color: var(--color-dark); /* background for SVGs */
     border-radius: 4px;
 }
-.mockup-placeholder {
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-dark);
-    color: rgba(255, 255, 255, 0.4);
-    font-weight: 600;
-    border-radius: 4px;
-    font-size: 0.9em;
-    border: 1px dashed rgba(255, 255, 255, 0.1);
-}
-
 .portfolio-item .caption {
     margin-top: 15px;
     font-size: 0.9em;
     color: var(--color-primary-accent);
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 /* ---------------------------------------------------- */
@@ -284,7 +282,7 @@ section {
 .course-section-wrapper {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr; 
-    gap: 20px; /* Reduced gap for a tighter look */
+    gap: 20px; 
     max-width: var(--max-width);
     margin: 0 auto 50px;
     text-align: left;
@@ -424,13 +422,16 @@ section {
     h2 { font-size: 2em; margin-bottom: 40px;}
     section { padding: 60px 5%; }
     
-    .portfolio-grid, .service-grid {
+    .portfolio-grid {
         grid-template-columns: 1fr;
     }
-    .portfolio-item.wide-item {
-        order: -1; /* Move the wide item up on mobile */
+    .portfolio-grid .wide-item {
+        grid-column: span 1;
     }
 
+    .service-grid {
+        grid-template-columns: 1fr 1fr;
+    }
     .course-section-wrapper {
         grid-template-columns: 1fr; 
     }
@@ -452,5 +453,11 @@ section {
     .contact-block, .social-block, .legal-block {
         padding-bottom: 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media (max-width: 600px) {
+    .service-grid {
+        grid-template-columns: 1fr;
     }
 }
