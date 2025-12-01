@@ -2,7 +2,7 @@
     <rect x="50" y="50" width="300" height="150" rx="8" fill="#FFFFFF" stroke="#EAEAEA" stroke-width="1"/>
 
     <rect x="70" y="70" width="80" height="40" rx="4" fill="#F0F0F0"/>
-    <text x="110" y="95" text-anchor="middle" font-family="Manrope, sans-serif" font-size="14" font-weight="700" fill="#212121">YOUR LOGO</text>
+    <text x="110" y="95" text-anchor="middle" font-family="Manrope, sans-serif" font-size="14" font-weight="700" fill="#212121">Logo.svg</text>
 
     <text x="70" y="140" font-family="Manrope, sans-serif" font-size="18" font-weight="700" fill="#212121">Your Name</text>
     <text x="70" y="160" font-family="Manrope, sans-serif" font-size="12" fill="#555555">Creative Director</text>
