@@ -1,0 +1,10 @@
+<svg width="400" height="100" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="50" y="40" width="300" height="20" rx="8" fill="#FFFFFF" stroke="#EAEAEA" stroke-width="1"/>
+    <path d="M350 40 L360 50 L350 60 Z" fill="#AAAAAA"/>
+    <path d="M320 40 V30 C320 25 315 25 315 30 V40 Z" fill="#555555"/>
+
+    <rect x="100" y="43" width="60" height="14" rx="3" fill="#F0F0F0"/>
+    <text x="130" y="52" text-anchor="middle" font-family="Manrope, sans-serif" font-size="8" font-weight="700" fill="#212121">YOUR LOGO</text>
+
+    <circle cx="65" cy="50" r="3" fill="#ff9700"/>
+</svg>
