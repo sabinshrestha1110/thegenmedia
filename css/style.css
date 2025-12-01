@@ -1,0 +1,455 @@
+/* ---------------------------------------------------- */
+/* 1. COLOR VARIABLES, FONT, & GLOBAL RESET */
+/* ---------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    /* Branding Colors */
+    --color-primary: #ff9700;       /* Orange CTA/Accent */
+    --color-dark: #212121;          /* Black Background */
+    --color-light: #eee7e9;         /* Off-White Text/Contrast */
+    --color-secondary-bg: #333333;  /* Dark Grey for 'Light' Sections */
+    
+    /* Typography */
+    --font-manrope: 'Manrope', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for nav links */
+}
+
+body {
+    font-family: var(--font-manrope);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    line-height: 1.6;
+}
+
+/* ---------------------------------------------------- */
+/* 2. TYPOGRAPHY AND HEADLINES */
+/* ---------------------------------------------------- */
+h1, h2, h3 {
+    margin-bottom: 20px;
+    font-weight: 800; /* Extra bold for impact */
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.5em; 
+    color: var(--color-light); /* Keep Hero H1 white for contrast */
+}
+
+h2 {
+    font-size: 2.5em;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+h2 i {
+    margin-right: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    color: var(--color-light); /* Subtitles should be readable white */
+    font-weight: 300;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-light);
+}
+
+/* ---------------------------------------------------- */
+/* 3. SECTION LAYOUTS */
+/* ---------------------------------------------------- */
+section {
+    padding: 80px 5%;
+    min-height: 50vh;
+}
+
+.dark-section {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.light-section {
+    background-color: var(--color-secondary-bg);
+    color: var(--color-light);
+}
+
+/* Utility Class */
+.text-center {
+    text-align: center;
+}
+
+/* ---------------------------------------------------- */
+/* 4. HEADER & NAVIGATION (Sticky) */
+/* ---------------------------------------------------- */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: rgba(33, 33, 33, 0.98); /* Near solid dark background */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo-img {
+    height: 40px; /* Logo size is fixed */
+    border-radius: 5px; /* Slight rounding for the GM icon */
+}
+
+#navbar nav a {
+    color: var(--color-light);
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+/* CTA button in the navigation */
+#navbar nav a.cta-link {
+    color: var(--color-dark);
+    background-color: var(--color-primary);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-left: 40px; /* Space it out */
+}
+
+#navbar nav a.cta-link:hover {
+    background-color: #ffad4a; /* Lighter orange on hover */
+    color: var(--color-dark);
+}
+
+/* ---------------------------------------------------- */
+/* 5. HERO & CTA BUTTONS */
+/* ---------------------------------------------------- */
+#hero {
+    text-align: center;
+    padding: 150px 5% 100px;
+}
+
+.cta-group {
+    margin-top: 50px;
+}
+
+.btn {
+    display: inline-flex; /* Use flex for icon alignment */
+    align-items: center;
+    padding: 15px 35px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 10px; /* Space between buttons */
+    border: 2px solid transparent;
+}
+
+.btn i {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-light); /* Secondary uses light text */
+    border-color: var(--color-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    border-color: var(--color-primary);
+}
+
+.large-btn {
+    margin-top: 40px;
+    padding: 18px 45px;
+    font-size: 1.1em;
+}
+
+/* ---------------------------------------------------- */
+/* 6. GRID LAYOUTS (Synergy, Courses, Services, Careers) */
+/* ---------------------------------------------------- */
+.feature-grid, .service-grid, .careers-grid {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Synergy Grid (3 columns for the core mission) */
+.feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.feature-box {
+    padding: 25px;
+    background-color: var(--color-secondary-bg);
+    border-radius: 8px;
+    border: 1px solid var(--color-dark);
+    transition: background-color 0.3s;
+}
+
+.feature-box:hover {
+    background-color: var(--color-dark);
+    border-color: var(--color-primary);
+}
+
+.feature-box h3 {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Institute Course Grid */
+.course-section-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; /* 3-month course is wider */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.course-card, .course-card-group, .addon-box {
+    padding: 30px;
+    border-radius: 8px;
+    background-color: var(--color-secondary-bg);
+}
+
+.course-card.primary-bg {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+}
+
+.course-card.primary-bg h3, .course-card.primary-bg .duration {
+    color: var(--color-dark);
+}
+
+.course-list, .skills-list, .service-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.course-list li, .skills-list li, .service-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.skills-list li i {
+    color: var(--color-primary);
+    margin-right: 10px;
+}
+
+.addon-highlight {
+    font-weight: 700;
+    color: var(--color-dark); 
+    background-color: var(--color-light); 
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+
+/* Studio Service Grid (4 columns) */
+.service-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+.service-group {
+    padding: 20px;
+    background-color: var(--color-dark);
+    border-radius: 6px;
+}
+.service-group h3 {
+    font-size: 1.3em;
+    color: var(--color-light);
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.service-list li {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+}
+
+/* Careers Grid (3 columns) */
+.careers-grid {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+.career-category h3 {
+    font-size: 1.5em;
+    color: var(--color-light);
+    border-bottom: 1px solid var(--color-primary);
+    padding-bottom: 10px;
+}
+.career-category ul {
+    list-style: none;
+    padding: 10px;
+}
+.career-category li {
+    padding: 5px 0;
+    font-weight: 300;
+}
+
+/* ---------------------------------------------------- */
+/* 7. FOOTER & SOCIALS */
+/* ---------------------------------------------------- */
+#contact {
+    background-color: var(--color-dark);
+    padding: 40px 5%;
+    border-top: 5px solid var(--color-primary);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Contact, Socials, Legal */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    text-align: left;
+}
+
+.footer-grid h3 {
+    color: var(--color-primary);
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.contact-block p i {
+    margin-right: 10px;
+    color: var(--color-primary);
+}
+
+.social-icons a {
+    font-size: 1.5em;
+    margin-right: 20px;
+    color: var(--color-light); /* Icons are white/light by default */
+}
+
+.social-icons a:hover {
+    color: var(--color-primary); /* Hover is orange */
+}
+
+.legal-block a {
+    display: block;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 5px;
+}
+.legal-block a:hover {
+    color: var(--color-primary);
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 20px;
+}
+
+
+/* ---------------------------------------------------- */
+/* 8. MOBILE RESPONSIVENESS (World-Class Clean Design) */
+/* ---------------------------------------------------- */
+
+@media (max-width: 900px) {
+    
+    /* Global Adjustments */
+    section {
+        padding: 50px 5%;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    
+    /* Navigation Stack */
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 10px;
+    }
+    #navbar nav {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #navbar nav a {
+        margin-left: 0;
+    }
+    
+    /* CTA Buttons Stack */
+    .cta-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn {
+        width: 90%;
+        margin: 8px 0;
+    }
+
+    /* Grid Stacking for Mobile */
+    .feature-grid, .service-grid, .careers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Course Layout Stacking */
+    .course-section-wrapper {
+        grid-template-columns: 1fr; 
+    }
+    .course-card.primary-bg {
+        order: -1; /* Place the 3-month course at the top on mobile */
+    }
+
+    /* Footer Stacking */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .contact-block, .social-block, .legal-block {
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .social-icons {
+        margin-top: 10px;
+    }
+}
