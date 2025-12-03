@@ -1,324 +1,265 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Gen Media — Institute & Studio</title>
-  <meta name="description" content="The Gen Media — Institute & Studio. Studio-driven courses and full-service branding & marketing. Enroll or hire our studio." />
-  <link rel="icon" href="/favicon.jpg" />
-
-  <!-- Fonts: Outfit (headings), Inter (body), Pacifico (accent) -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&family=Pacifico&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>The Gen Media | Igniting Careers. Amplifying Brands.</title>
+    <meta name="description" content="The Gen Media: A creative Institute and Studio where education meets execution. Launch your career or transform your brand with our strategic expertise.">
+    <link rel="canonical" href="https://thegenmedia.com.np/">
+    
+    <link rel="icon" type="image/jpeg" href="favicon.jpg"> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600&family=Caveat&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-  <a class="skip" href="#main">Skip to content</a>
 
-  <header class="site-header" role="banner">
-    <div class="wrap header-row">
-      <!-- Text-based logo -->
-      <a class="brand" href="/" aria-label="The Gen Media home">
-        <span class="brand-the">The</span>
-        <span class="brand-name">Gen Media</span>
-        <span class="brand-sub">Institute &amp; Studio</span>
-      </a>
-
-      <nav class="nav" role="navigation" aria-label="Main navigation">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#institute">Institute</a></li>
-          <li><a href="#studio">Studio</a></li>
-          <li><a href="#brand">Brand</a></li>
-          <li><a href="#careers">Careers</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-controls">
-        <a class="btn btn-cta" href="https://forms.gle/6L6UycsvaEgu83Fn7" target="_blank" rel="noopener noreferrer">Enroll</a>
-        <button id="themeToggle" class="icon-btn" aria-label="Toggle color theme">Theme</button>
-        <button id="menuToggle" class="icon-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
-      </div>
-    </div>
-
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="mobile-menu" hidden aria-hidden="true">
-      <a href="#home">Home</a>
-      <a href="#institute">Institute</a>
-      <a href="#studio">Studio</a>
-      <a href="#brand">Brand</a>
-      <a href="#careers">Careers</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn-cta" href="https://forms.gle/6L6UycsvaEgu83Fn7" target="_blank">Enroll</a>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- HERO -->
-    <section id="home" class="segment hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <div class="hero-watermark" aria-hidden="true">GM</div>
-          <h1 class="hero-title">THE GEN MEDIA</h1>
-          <p class="hero-subtitle">Institute &amp; Studio</p>
-          <p class="hero-lead">Igniting careers. Amplifying brands. Practical courses and full-service creative for businesses and students.</p>
-
-          <div class="hero-ctas">
-            <a class="btn btn-cta" href="https://forms.gle/6L6UycsvaEgu83Fn7" target="_blank">Explore Institute</a>
-            <a class="btn btn-outline" href="https://forms.gle/WZLYFY72FQ23aKHg8" target="_blank">Explore Studio</a>
-          </div>
-
-          <div class="scroll-indicator" aria-hidden="true">Scroll ↓</div>
+    <header id="navbar">
+        <div class="logo">
+            <span class="logo-accent">The</span> Gen Media
         </div>
+        <nav>
+            <a href="#studio">Studio</a>
+            <a href="#institute">Institute</a>
+            <a href="#careers">Careers</a>
+            <a href="#contact" class="cta-link">Contact</a>
+        </nav>
+    </header>
 
-        <div class="hero-art" aria-hidden="true">
-          <!-- decorative parallax shapes -->
-          <svg viewBox="0 0 560 360" preserveAspectRatio="xMidYMid meet" class="hero-svg">
-            <rect width="560" height="360" rx="20" fill="var(--cream)"/>
-            <g class="parallax" data-parallax="-0.12">
-              <rect x="28" y="28" width="320" height="220" rx="12" fill="var(--white)" stroke="var(--light-grey)"/>
-              <rect x="364" y="36" width="160" height="24" rx="8" fill="var(--char-900)" opacity="0.06"/>
-              <rect x="364" y="66" width="120" height="12" rx="6" fill="var(--char-900)" opacity="0.04"/>
-            </g>
-            <circle class="parallax" data-parallax="-0.06" cx="480" cy="64" r="34" fill="var(--orange)" opacity="0.12"/>
-          </svg>
+    <section id="hero" class="bg-cream">
+        <div class="hero-content">
+            <div class="watermark-bg">GM</div>
+            
+            <div class="hero-text-block">
+                <h1 class="h1-outfit">
+                    <span class="text-orange">Igniting Careers.</span><br>
+                    Amplifying Brands.
+                </h1>
+                <p class="body-large">The Gen Media: The only Creative Institute powered by a Professional Design Studio. We are where education meets execution.</p>
+            </div>
+            
+            <div class="cta-group">
+                <a href="#institute" class="btn btn-primary large-btn">
+                    <i class="fas fa-graduation-cap"></i> EXPLORE INSTITUTE
+                </a>
+                <a href="#studio" class="btn btn-secondary large-btn">
+                    <i class="fas fa-briefcase"></i> EXPLORE STUDIO
+                </a>
+            </div>
+            
+            <a href="#dual-path" class="scroll-down">
+                <p>Scroll to discover</p>
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
-      </div>
     </section>
 
-    <!-- DUAL PATH -->
-    <section class="segment dual" id="dual">
-      <div class="wrap">
-        <h2 class="section-title reveal">Two paths — One engine</h2>
-        <p class="muted reveal">Students train with the studio; businesses get studio results. Choose your path.</p>
-
-        <div class="dual-grid">
-          <article class="card reveal">
-            <div class="card-head"><span class="label accent">For Creators</span></div>
-            <h3>Launch your creative career</h3>
-            <p class="muted">Hands-on courses in Graphic Design, Motion, and Video Editing plus client & freelancing skills.</p>
-            <p><a class="link" href="https://forms.gle/6L6UycsvaEgu83Fn7" target="_blank">Learn more →</a></p>
-          </article>
-
-          <article class="card reveal">
-            <div class="card-head"><span class="label">For Businesses</span></div>
-            <h3>Transform your brand</h3>
-            <p class="muted">Identity, social strategy, campaigns, video and packaging — tailored for impact.</p>
-            <p><a class="link" href="https://forms.gle/WZLYFY72FQ23aKHg8" target="_blank">Book a consultation →</a></p>
-          </article>
+    <section id="dual-path" class="bg-white">
+        <div class="section-container">
+            <h2 class="h2-outfit text-charcoal">The Dual Path: Education Meets Execution</h2>
+            <div class="dual-path-grid">
+                
+                <div class="path-card path-institute">
+                    <h3 class="h3-outfit"><i class="fas fa-graduation-cap icon-orange"></i> For Future Creators</h3>
+                    <p class="body-large">Launch your career with industry-informed curriculum. Master design, animation, video editing, and essential business skills.</p>
+                    <a href="#institute" class="read-more-link">
+                        Learn More About Institute <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="path-card path-studio">
+                    <h3 class="h3-outfit"><i class="fas fa-bezier-curve icon-charcoal"></i> For Transforming Brands</h3>
+                    <p class="body-large">Transform your brand's presence with strategic consulting, high-impact content, and complete digital/local marketing execution.</p>
+                    <a href="#studio" class="read-more-link">
+                        Book Studio Consultation <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
+        
+        <div class="difference-box bg-cream-darker">
+            <h4 class="h4-outfit text-charcoal">Our Edge: The Synergistic Difference</h4>
+            <ul class="check-list">
+                <li><i class="fas fa-check-circle text-orange"></i> **Real-World Experience:** Students learn *and* work on actual client projects via the Studio.</li>
+                <li><i class="fas fa-check-circle text-orange"></i> **Holistic Skill Set:** Curriculum includes technical mastery alongside soft, business, and client-handling skills.</li>
+                <li><i class="fas fa-check-circle text-orange"></i> **Strategic Guidance:** We deliver strategic direction and planning, not just design execution.</li>
+            </ul>
+        </div>
     </section>
 
-    <!-- THE DIFFERENCE -->
-    <section id="why" class="segment difference">
-      <div class="wrap">
-        <h2 class="section-title reveal">Where Education Meets Execution</h2>
-        <p class="muted reveal">The Institute trains talent the Studio can hire — and Studio work keeps curriculum current. Graduates leave with real portfolio work.</p>
-
-        <ul class="bullets reveal">
-          <li>Learn & work on live client projects</li>
-          <li>Master technical, business and soft skills</li>
-          <li>Freelancing and client handling included</li>
-          <li>Studio-led, industry-informed curriculum</li>
-        </ul>
-      </div>
+    <section id="studio" class="bg-charcoal">
+        <div class="section-container">
+            <h2 class="h2-outfit text-white">The Studio: Strategic & Full-Spectrum</h2>
+            <p class="body-large subtitle text-white-muted">We provide end-to-end creative solutions, transforming ideas into market-ready content and campaigns.</p>
+            
+            <div class="service-grid">
+                <div class="service-group bg-darker">
+                    <h4 class="h4-outfit text-orange">Brand & Strategy</h4>
+                    <ul class="body-inter">
+                        <li>Business Consulting & Planning</li>
+                        <li>Brand Identity Planning & Design</li>
+                        <li>Logo Design & Brand Guides</li>
+                    </ul>
+                </div>
+                <div class="service-group bg-darker">
+                    <h4 class="h4-outfit text-orange">Digital Content & Campaigns</h4>
+                    <ul class="body-inter">
+                        <li>Social Media Creation, Handling & Maintenance</li>
+                        <li>Content Planning, Posts, Reels, Videos, Clipping</li>
+                        <li>National & International Internet Ads</li>
+                    </ul>
+                </div>
+                <div class="service-group bg-darker">
+                    <h4 class="h4-outfit text-orange">Production & Execution</h4>
+                    <ul class="body-inter">
+                        <li>Web Development (Front-end focus)</li>
+                        <li>Photography & Videography</li>
+                        <li>Music Composition & Voice Cover Artist Booking</li>
+                    </ul>
+                </div>
+                <div class="service-group bg-darker">
+                    <h4 class="h4-outfit text-orange">Local & Print Media</h4>
+                    <ul class="body-inter">
+                        <li>Local Posters, Shop Boards, Banners Design</li>
+                        <li>Newspapers, Events (Micing), Cinema/TV Ads</li>
+                        <li>Product Packages & Light Board Designs</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <a href="https://forms.gle/WZLYFY72FQ23aKHg8" target="_blank" class="btn btn-primary large-btn margin-top-50">
+                CLIENT INQUIRY FORM <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
     </section>
 
-    <!-- STUDIO SERVICES -->
-    <section id="studio" class="segment services">
-      <div class="wrap">
-        <h2 class="section-title reveal">Studio — Services</h2>
-        <p class="muted reveal">Full-spectrum branding & marketing for local and international clients.</p>
-
-        <div class="services-grid">
-          <div class="service card mockup reveal" tabindex="0" role="article">
-            <div class="mock-visual"></div>
-            <h4>Branding & Identity</h4>
-            <p class="muted">Logo systems, guides and mockups.</p>
-          </div>
-
-          <div class="service card mockup reveal" tabindex="0" role="article">
-            <div class="mock-visual"></div>
-            <h4>Social Marketing</h4>
-            <p class="muted">Content planning, posts and reels.</p>
-          </div>
-
-          <div class="service card mockup reveal" tabindex="0" role="article">
-            <div class="mock-visual"></div>
-            <h4>Video & Production</h4>
-            <p class="muted">Shooting, editing and ad creatives.</p>
-          </div>
-
-          <div class="service card mockup reveal" tabindex="0" role="article">
-            <div class="mock-visual"></div>
-            <h4>Packaging & Print</h4>
-            <p class="muted">Posters, banners and shopfronts.</p>
-          </div>
-
-          <div class="service card mockup reveal" tabindex="0" role="article">
-            <div class="mock-visual"></div>
-            <h4>Web & Ads</h4>
-            <p class="muted">Landing pages and internet advertising creatives.</p>
-          </div>
-
-          <div class="service card mockup reveal" tabindex="0" role="article">
-            <div class="mock-visual"></div>
-            <h4>Business Consulting</h4>
-            <p class="muted">Campaign planning and brand strategy.</p>
-          </div>
+    <section id="institute" class="bg-white">
+        <div class="section-container">
+            <h2 class="h2-outfit text-charcoal">The Institute: Practical, Job-Ready Training</h2>
+            <p class="body-large subtitle text-charcoal-muted">We train talent that the Studio can employ, ensuring high relevance and immediate job readiness.</p>
+            
+            <div class="course-grid">
+                
+                <div class="course-card course-3-month">
+                    <span class="label text-orange">CORE</span>
+                    <h3 class="h3-outfit">3-Month Creative Course</h3>
+                    <p class="course-list-title body-medium">Includes:</p>
+                    <ul class="course-list body-inter">
+                        <li>Graphic Designing</li>
+                        <li>Motion Graphics</li>
+                        <li>Basic Video Editing</li>
+                    </ul>
+                </div>
+                
+                <div class="course-card course-1-month">
+                    <span class="label text-charcoal">SPECIALIST</span>
+                    <h3 class="h3-outfit">1-Month Intensive Courses</h3>
+                    <p class="course-list-title body-medium">Choose from:</p>
+                    <ul class="course-list body-inter">
+                        <li>Graphic Designing Specialist</li>
+                        <li>Motion Graphics Specialist</li>
+                        <li>Video Editing Specialist</li>
+                    </ul>
+                </div>
+                
+                <div class="course-card course-addons">
+                    <span class="label text-charcoal">INBUILT ADD-ONS</span>
+                    <h3 class="h3-outfit">Career & Business Skills</h3>
+                    <p class="course-list-title body-medium">Included in all courses:</p>
+                    <ul class="course-list body-inter">
+                        <li>Personality Development & Public Speaking</li>
+                        <li>Client Handling, Onboarding & Dealing</li>
+                        <li>Freelancing, Lead Collection & Research</li>
+                        <li>Internet, Cloud Services & Email Mastery</li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <a href="https://forms.gle/6L6UycsvaEgu83Fn7" target="_blank" class="btn btn-primary large-btn margin-top-50">
+                STUDENT INQUIRY FORM <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
-
-        <p class="center reveal"><a class="btn btn-outline" href="https://forms.gle/WZLYFY72FQ23aKHg8" target="_blank">Client Inquiry</a></p>
-      </div>
     </section>
 
-    <!-- INSTITUTE COURSES -->
-    <section id="institute" class="segment institute">
-      <div class="wrap">
-        <h2 class="section-title reveal">Institute — Courses</h2>
-        <p class="muted reveal">Practical, studio-informed programs that prepare students for jobs and freelancing.</p>
-
-        <div class="courses-grid">
-          <div class="course card reveal">
-            <h4>Core — 3 Months</h4>
-            <p class="muted">Graphic Design, Motion Graphics & Video Editing. Portfolio projects + career add-ons.</p>
-          </div>
-
-          <div class="course card reveal">
-            <h4>Graphic Design — 1 Month</h4>
-            <p class="muted">Brand systems, layout, typography and client briefs.</p>
-          </div>
-
-          <div class="course card reveal">
-            <h4>Motion & Video — 1 Month</h4>
-            <p class="muted">Motion fundamentals and short-form editing workflows.</p>
-          </div>
+    <section id="careers" class="bg-cream-darker">
+        <div class="section-container">
+            <h2 class="h2-outfit text-charcoal">Career Opportunities</h2>
+            <p class="body-large subtitle text-charcoal-muted">Join our team of strategic thinkers and execution experts.</p>
+            
+            <div class="career-list-grid">
+                <div class="career-group">
+                    <h4 class="h4-outfit text-charcoal">Design & Production</h4>
+                    <ul class="body-inter">
+                        <li>Graphic Designer</li>
+                        <li>Animator / Illustrator</li>
+                        <li>Photographer / Videographer / Video Editor</li>
+                    </ul>
+                </div>
+                
+                <div class="career-group">
+                    <h4 class="h4-outfit text-charcoal">Strategy & Management</h4>
+                    <ul class="body-inter">
+                        <li>Content Strategist / Manager</li>
+                        <li>Social Media Handler / Influencer</li>
+                        <li>Web Developer</li>
+                    </ul>
+                </div>
+                
+                <div class="career-group">
+                    <h4 class="h4-outfit text-charcoal">Business & Support</h4>
+                    <ul class="body-inter">
+                        <li>Lead Collector / Receptionist</li>
+                        <li>Music Composer / Voice Cover Artist</li>
+                        <li>Artist / Model</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <a href="https://forms.gle/aVpEvbdnr25QuBoPA" target="_blank" class="btn btn-secondary large-btn btn-charcoal margin-top-50">
+                APPLY NOW <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
-
-        <p class="center reveal"><a class="btn btn-cta" href="https://forms.gle/6L6UycsvaEgu83Fn7" target="_blank">Student Inquiry</a></p>
-      </div>
     </section>
+    
+    <footer id="contact" class="bg-charcoal-dark">
+        <div class="footer-grid">
+            
+            <div class="contact-block">
+                <h3 class="h4-outfit text-orange">Get In Touch</h3>
+                <p class="body-inter"><i class="fas fa-map-marker-alt"></i> Address: Pathari, Morang, Nepal</p>
+                <p class="body-inter"><i class="fas fa-phone"></i> Phone: <a href="tel:+9779761356000">+977 9761356000</a></p>
+                <p class="body-inter"><i class="fas fa-envelope"></i> Email: <a href="mailto:info@thegenmedia.com.np">info@thegenmedia.com.np</a></p>
+            </div>
+            
+            <div class="link-block">
+                <h3 class="h4-outfit text-orange">Quick Links</h3>
+                <ul class="body-inter">
+                    <li><a href="#studio">Studio Services</a></li>
+                    <li><a href="#institute">Institute Courses</a></li>
+                    <li><a href="#careers">Career Opportunities</a></li>
+                </ul>
+            </div>
 
-    <!-- CAREERS -->
-    <section id="careers" class="segment careers">
-      <div class="wrap">
-        <h2 class="section-title reveal">Careers — Open Roles</h2>
-        <p class="muted reveal">We hire a wide range of creative and support roles; students are encouraged to apply.</p>
-
-        <ul class="job-list reveal">
-          <li>Videographer</li>
-          <li>Video Editor</li>
-          <li>Content Strategist / Manager</li>
-          <li>Social Media Handler</li>
-          <li>Graphic Designer / Animator / Illustrator</li>
-          <li>Web Developer</li>
-          <li>Receptionist / Lead Collector</li>
-          <li>Music Composer / Voice Artist / Model</li>
-        </ul>
-
-        <p class="center reveal"><a class="btn btn-outline" href="https://forms.gle/aVpEvbdnr25QuBoPA" target="_blank">Job Inquiry</a></p>
-      </div>
-    </section>
-
-    <!-- BRAND SHOWCASE -->
-    <section id="brand" class="segment showcase">
-      <div class="wrap">
-        <h2 class="section-title reveal">Our Brand — Live</h2>
-        <p class="muted reveal">This website is the brand — colors, type and layout demonstrate our design system in action.</p>
-
-        <div class="showcase-grid">
-          <div class="showcard card reveal" tabindex="0">
-            <div class="swatch" style="background:var(--orange)"></div>
-            <h4>Primary Orange</h4>
-            <p class="muted small">Used for CTAs and energetic moments.</p>
-          </div>
-
-          <div class="showcard card reveal" tabindex="0">
-            <div class="swatch" style="background:var(--char-900)"></div>
-            <h4>Deep Charcoal</h4>
-            <p class="muted small">Headlines and structure.</p>
-          </div>
-
-          <div class="showcard card reveal" tabindex="0">
-            <div class="swatch" style="background:var(--cream)"></div>
-            <h4>Cream</h4>
-            <p class="muted small">Primary background for breathing room.</p>
-          </div>
-
-          <div class="showcard card reveal" tabindex="0">
-            <div class="swatch" style="background:var(--gold)"></div>
-            <h4>Soft Gold</h4>
-            <p class="muted small">Premium highlights & awards.</p>
-          </div>
+            <div class="social-block">
+                <h3 class="h4-outfit text-orange">Connect</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/the.gen.media/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@the_gen_media" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/the.gen.media.pathari." target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/110202682/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/the_gen_media" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
         </div>
 
-        <p class="center reveal"><a class="link" href="#brand-guide">→ Explore Brand Guide (coming)</a></p>
-      </div>
-    </section>
+        <p class="copyright body-caption">Copyright © 2025 The Gen Media. All rights reserved. | Powered by <a href="https://thegenmedia.com.np">thegenmedia.com.np</a></p>
+    </footer>
 
-    <!-- CONTACT -->
-    <section id="contact" class="segment contact">
-      <div class="wrap">
-        <h2 class="section-title reveal">Contact</h2>
-        <p class="muted reveal">For admissions, client projects and enquiries.</p>
-
-        <div class="contact-grid reveal">
-          <div class="card">
-            <h4>Email</h4>
-            <p><a href="mailto:info@thegenmedia.com.np">info@thegenmedia.com.np</a></p>
-          </div>
-
-          <div class="card">
-            <h4>Phone</h4>
-            <p><a href="tel:+9779761356000">+977 9761356000</a></p>
-          </div>
-
-          <div class="card">
-            <h4>Address</h4>
-            <p>Pathari, Morang, Nepal</p>
-          </div>
-        </div>
-
-        <div class="muted socials reveal">
-          <a href="https://www.instagram.com/the.gen.media/" target="_blank" rel="noopener noreferrer">Instagram</a> ·
-          <a href="https://www.tiktok.com/@the_gen_media" target="_blank" rel="noopener noreferrer">TikTok</a> ·
-          <a href="https://www.facebook.com/the.gen.media.pathari." target="_blank" rel="noopener noreferrer">Facebook</a> ·
-          <a href="https://www.linkedin.com/company/110202682/" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
-          <a href="https://x.com/the_gen_media" target="_blank" rel="noopener noreferrer">X</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div>
-        <div class="brand-footer">
-          <span class="brand-the">The</span>
-          <span class="brand-name">Gen Media</span>
-        </div>
-        <p class="muted small">© <span id="year"></span> The Gen Media — Institute &amp; Studio</p>
-      </div>
-
-      <div>
-        <h4>Quick links</h4>
-        <ul class="muted">
-          <li><a href="#institute">Institute</a></li>
-          <li><a href="#studio">Studio</a></li>
-          <li><a href="#careers">Careers</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Contact</h4>
-        <p class="muted small">info@thegenmedia.com.np<br>+977 9761356000</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/scripts.js" defer></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
