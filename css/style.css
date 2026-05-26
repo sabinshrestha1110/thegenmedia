@@ -1,0 +1,249 @@
+/* =======================
+   GLOBAL & RESET
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #e8e8e8;
+    color: #1f2937;
+}
+
+/* =======================
+   GLOBAL BACKGROUND OVERLAY
+======================= */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../assets/images/background.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 68px;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(3px);
+    z-index: 1000;
+}
+
+.logo-search {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #eafbea;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin-left: 32px;
+    font-size: 14px;
+    opacity: 0.9;
+    padding-bottom: 6px;
+}
+
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.navbar nav a:hover::after,
+.navbar nav a.active::after {
+    width: 100%;
+}
+
+.navbar nav a.active {
+    color: #4CAF50;
+    font-weight: 600;
+}
+.navbar nav a.active::after {
+    background: #4CAF50;
+}
+
+.hamburger { 
+    display: none; 
+    flex-direction: column; 
+    gap: 5px; 
+    cursor: pointer; 
+}
+.hamburger span { 
+    width: 24px; 
+    height: 2px; 
+    background: white; 
+    transition: all 0.3s; 
+}
+
+/* =======================
+   FOOTER
+======================= */
+.footer {
+    background: #292929;
+    color: #e6e6e6;
+    padding: 80px 10% 40px;
+    width: 100%;
+    position: relative;
+    clear: both;
+    z-index: 1;
+    margin-top: 40px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* ensure footer pushes to bottom when page content is short */
+body > footer {
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.footer-brand h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.footer-links h4 {
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+.footer-links a, .footer-links p {
+    display: block;
+    font-size: 14px;
+    color: #cccccc;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+    color: #4CAF50;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+/* =======================
+   UTILITIES
+======================= */
+
+.pt-0 {
+    padding-top: 0 !important;
+}
+
+/* =======================
+   ANIMATIONS & UI POLISH
+======================= */
+/* Scroll Animations */
+.fade-up-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-up-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hamburger X Animation */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.pt-0 {
+    padding-top: 0 !important;
+}
+
+/* =======================
+   ANIMATIONS & UI POLISH
+======================= */
+/* Scroll Animations */
+.fade-up-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-up-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hamburger X Animation */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}

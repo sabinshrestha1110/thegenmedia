@@ -1,0 +1,111 @@
+/* =======================
+   CONTACT PAGE SPECIFIC STYLES
+======================= */
+
+/* =======================
+   PAGE HERO (Non-video)
+======================= */
+.page-hero {
+    padding: 140px 10% 80px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 54px;
+    font-weight: 300;
+    color: #2c2c2c;
+    margin-bottom: 16px;
+}
+
+.page-hero p {
+    font-size: 16px;
+    color: #6b7280;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: justify;
+    text-align-last: center;
+    line-height: 1.8;
+}
+
+/* =======================
+   CONTENT SECTIONS
+======================= */
+.content-section {
+    padding: 80px 10%;
+}
+
+/* =======================
+   CONTACT FORM
+======================= */
+.feedback-container {
+    background: #fbfbed;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin: 0 auto;
+    text-align: left;
+}
+
+.feedback-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 28px;
+}
+
+.feedback-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #2c2c2c;
+}
+
+.feedback-form input, 
+.feedback-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+}
+
+.feedback-form button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background-color: #2a7a2a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.feedback-form button:hover {
+    background-color: #1e591e;
+}
+
+/* =======================
+   ANIMATIONS
+======================= */
+@keyframes normalFadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.page-hero h1 {
+    opacity: 0;
+    animation: normalFadeUp 1s ease-out 0.2s forwards;
+}
+
+.page-hero p {
+    opacity: 0;
+    animation: normalFadeUp 1s ease-out 0.4s forwards;
+}
