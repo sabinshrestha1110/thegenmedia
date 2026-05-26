@@ -1,0 +1,144 @@
+/* =======================
+   ABOUT PAGE SPECIFIC STYLES
+======================= */
+
+/* =======================
+   PAGE HERO (Non-video)
+======================= */
+.page-hero {
+    padding: 140px 10% 80px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 54px;
+    font-weight: 300;
+    color: #2c2c2c;
+    margin-bottom: 16px;
+}
+
+.page-hero p {
+    font-size: 16px;
+    color: #6b7280;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: justify;
+    text-align-last: center;
+    line-height: 1.8;
+}
+
+/* =======================
+   FEATURED GRID & CARDS
+======================= */
+.featured {
+    position: relative;
+    padding: 100px 10%;
+    background: #f5f9f5;
+    text-align: left;
+    border-radius: 32px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+    max-width: 1280px;
+    margin: 0 auto 80px;
+}
+
+.featured .featured-heading {
+    display: block;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+.featured-sub {
+    font-size: 16px;
+    opacity: 0.75;
+    margin-bottom: 40px;
+    max-width: 760px;
+    line-height: 1.8;
+}
+
+.why-choose-list {
+    display: grid;
+    gap: 36px;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.why-choose-item {
+    padding: 0;
+}
+
+.why-choose-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2c2c2c;
+}
+.why-choose-item p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* =======================
+   CONTENT SECTIONS
+======================= */
+.content-section {
+    padding: 80px 10%;
+}
+
+/* =======================
+   STORY SECTION
+======================= */
+.story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 22px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
+
+.story-text h2 {
+    font-size: 38px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #2c2c2c;
+}
+
+.story-text p {
+    color: #6b7280;
+    line-height: 1.9;
+    margin-bottom: 16px;
+    font-size: 15px;
+}
+
+/* =======================
+   ANIMATIONS
+======================= */
+@keyframes normalFadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.page-hero h1 {
+    opacity: 0;
+    animation: normalFadeUp 1s ease-out 0.2s forwards;
+}
+
+.page-hero p {
+    opacity: 0;
+    animation: normalFadeUp 1s ease-out 0.4s forwards;
+}
+
+/* =======================
+   RESPONSIVE - ABOUT PAGE
+======================= */
+@media (max-width: 768px) {
+    .story {
+        grid-template-columns: 1fr;
+    }
+}
